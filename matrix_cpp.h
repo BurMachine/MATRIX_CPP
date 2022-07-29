@@ -91,7 +91,7 @@ class S21Matrix {
 
     //    void sum_matrix(const S21Matrix& other);
         // Other methods..
-        double  getElem(int i, int j);
+        double getElem(int i, int j);
         void matrix_printer();
 
         bool eq_matrix(const S21Matrix& other);
@@ -107,12 +107,16 @@ class S21Matrix {
         // operators
         S21Matrix& operator =(const S21Matrix& other);
         S21Matrix& operator+(const S21Matrix &right);
-
+        S21Matrix& operator+=(const S21Matrix &righ);
+        S21Matrix& operator-=(const S21Matrix &righ);
+        S21Matrix& operator*=(const S21Matrix &righ);
+        bool& operator==(const S21Matrix &righ);
 
         double get_num(int i, int j);
         void set_num(int i, int j, double num);
         void fill_minor(S21Matrix& minor, int i, int j);
         double determinant_rec(double **matrix, int dim);
+//        double& operator[][](int index_i, int index_j);
 
 };
 

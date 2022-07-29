@@ -7,13 +7,13 @@
 #include "math.h"
 
 bool S21Matrix::eq_matrix(const S21Matrix& other) {
-    int code = 0;
-    if (_rows != other._rows) code = 1;
-    if (_cols != other._cols) code = 1;
-    if (code == 0) {
+    bool code = true;
+    if (_rows != other._rows) code = false;
+    if (_cols != other._cols) code = false;
+    if (code == true) {
         for (int i = 0; i < _rows; i++) {
             for (int j = 0; j < _cols; j++) {
-                if (fabs(_matrix[i][j] - other._matrix[i][j]) > EPS) code = 1;
+                if (fabs(_matrix[i][j] - other._matrix[i][j]) > EPS) code = false;
             }
         }
     }

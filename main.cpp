@@ -36,9 +36,12 @@ int main() {
 //        }
 //    }
 //    matrix1 = matrix.inverse_matrix();
-matrix2 = (matrix1 + matrix);
+//matrix1 -= matrix;
 //    std::cout << a << std::endl;
-    matrix.matrix_printer();
+    matrix1 *= matrix;
+    matrix1.matrix_printer();
+
+
 //    matrix1.matrix_printer();
     return 0;
 }
